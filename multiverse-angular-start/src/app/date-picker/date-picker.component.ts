@@ -23,7 +23,7 @@ export class DatePickerComponent implements OnInit{
       }
     )
   }
-
+  // TODO: Set the date in the datepicker because when init it is blank
   getInitPicture(){
     const TodaysDate = "2023-07-27";
     this.nasaApiService.getAstronomyPictureOfTheDay(TodaysDate).subscribe(
