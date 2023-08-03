@@ -1,11 +1,33 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
+import { MaterialModule } from './material/material.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { DatePickerComponent } from './date-picker/date-picker.component';
+import { RangeSliderComponent } from './range-slider/range-slider.component';
+import { ImageViewComponent } from './image-view/image-view.component';
+import { BrowserModule } from '@angular/platform-browser';
 
 describe('AppComponent', () => {
   beforeEach(() => TestBed.configureTestingModule({
-    imports: [RouterTestingModule],
-    declarations: [AppComponent]
+    imports: [
+      BrowserModule,
+      RouterTestingModule,
+      AppRoutingModule,
+      BrowserAnimationsModule,
+      HttpClientModule,
+      MaterialModule,
+      FormsModule
+    ],
+    declarations: [
+      AppComponent,
+      DatePickerComponent,
+      RangeSliderComponent,
+      ImageViewComponent
+    ]
   }));
 
   it('should create the app', () => {
