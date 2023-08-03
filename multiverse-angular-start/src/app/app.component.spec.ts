@@ -26,26 +26,29 @@ describe('AppComponent', () => {
       AppComponent,
       DatePickerComponent,
       RangeSliderComponent,
-      ImageViewComponent
+      ImageViewComponent,
     ]
   }));
+  
 
   it('should create the app', () => {
     const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
   });
 
   it(`should have as title 'multiverse-angular-start'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
     const app = fixture.componentInstance;
     expect(app.title).toEqual('multiverse-angular-start');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
+    fixture.detectChanges();
     expect(compiled.querySelector('.content span')?.textContent).toContain('multiverse-angular-start app is running!');
   });
 });
